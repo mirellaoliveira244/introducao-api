@@ -1,4 +1,4 @@
-import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./bd.js";
+import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "../db/index.js";
 import { Router } from "express";
 const router = Router();
 
