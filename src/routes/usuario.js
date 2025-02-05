@@ -1,6 +1,6 @@
 import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./bd.js";
 import { Router } from "express";
-const router=Router();
+const router = Router();
 
 router.get("/usuarios", async (req, res) => {
   try {
