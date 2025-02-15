@@ -8,10 +8,7 @@ const app = express(); // Instancia o Express
 const port = 3000; // Define a porta
 
 app.use(roteadorUsuario);
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ message: "Internal Server Error", error: err.message });
-});
+app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log("Rota / solicitada");
