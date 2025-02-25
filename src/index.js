@@ -1,5 +1,6 @@
 //index.js
 import dotenv from "dotenv";
+import cors from "cors";
 import express from "express";
 import roteadorUsuario from "./routes/usuario.js";
 import roteadorLogin from "./routes/login.js";
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(roteadorUsuario);
 app.use(roteadorLogin);
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/", (req, res) => {
   console.log("Rota / solicitada");
